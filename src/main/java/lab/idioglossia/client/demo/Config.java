@@ -31,7 +31,7 @@ public class Config {
     }
 
 
-    //sens http request when ws fails
+    //send http request when ws fails
     @Bean("rowHttpClientHolder")
     public RowHttpClientHolder rowHttpClientHolder(){
         return new RowHttpClientHolder() {
