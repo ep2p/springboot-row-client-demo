@@ -132,6 +132,18 @@ public class Controller {
             public void onMessage(Subscription subscription, SampleDto sampleDto) {
                 System.out.println("Received published message-> " + sampleDto);
                 System.out.println(subscription);
+                subscription.close(new ResponseCallback<SampleDto>(SampleDto.class) {
+                    @Override
+                    public void onResponse(RowResponse<SampleDto> rowResponse) {
+                        System.out.println(rowResponse);
+                    }
+
+                    @Override
+                    public void onError(Throwable throwable) {
+                        throwable.printStackTrace();
+
+                    }
+                });
             }
         });
     }

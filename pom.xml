@@ -39,7 +39,7 @@
 		<dependency>
 			<groupId>com.github.idioglossia</groupId>
 			<artifactId>row-client-starter</artifactId>
-			<version>0.0.4-SNAPSHOT</version>
+			<version>0.1.2-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 
